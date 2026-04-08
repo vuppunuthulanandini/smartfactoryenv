@@ -1,0 +1,18 @@
+
+name: smart_factory_env
+version: 0.1
+description: "OpenEnv environment simulating a factory assembly line"
+tasks:
+  - name: easy
+    description: "Move raw materials to machines"
+  - name: medium
+    description: "Schedule multiple machines efficiently"
+  - name: hard
+    description: "Optimize production with constraints"
+action_space:
+  machine: ["M1", "M2", "M3"]
+  task: ["process_raw"]
+observation_space:
+  machines: ["idle", "busy"]
+  inventory: ["raw", "finished"]
+  step: int
